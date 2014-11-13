@@ -64,23 +64,28 @@ public class WrapperTest {
          public void wrapTwoWordsAfterSpace() {
              checkWrap("word word", 6, "word\nword");
          }
-//
-//         @Test
-//         public void wrapThreeWordsAfterFirstSpace() {
-//             checkWrap("word word word", 6, "word\nword\nword");
-//         }
-//
-//         @Test
-//         public void wrapThreeWordsAfterSecondSpace() {
-//             checkWrap("word word word", 11,
-//                     "word word\nword");
-//         }
-//
-//         @Test
-//         public void wrapWordsAfterSpace() {
-//             checkWrap("Ahoj len tak som si vsimol, ze robis nieco zaujimave", 10,
-//                     "Ahoj len\ntak som si\nvsimol, ze\nrobis\nnieco\nzaujimave");
-//         }
+
+         @Test
+         public void wrapThreeWordsAfterFirstSpace() {
+             checkWrap("word word word", 6, "word\nword\nword");
+         }
+
+         @Test
+         public void wrapThreeWordsAfterSecondSpace() {
+             checkWrap("word word word", 11,
+                     "word word\nword");
+         }
+
+         @Test
+         public void wrapJustBeforeWordBoundary() throws Exception {
+             checkWrap("word word", 4, "word\nword");
+         }
+
+         @Test
+         public void wrapWordsAfterSpace() {
+             checkWrap("Ahoj len tak som si vsimol, ze robis nieco zaujimave", 10,
+                     "Ahoj len\ntak som si\nvsimol, ze\nrobis\nnieco\nzaujimave");
+         }
      }
 
 
