@@ -1,0 +1,1 @@
+Wonderful kata taken from http://thecleancoder.blogspot.cz/2010/10/craftsman-62-dark-path.html.
