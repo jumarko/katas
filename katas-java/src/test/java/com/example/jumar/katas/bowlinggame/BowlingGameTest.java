@@ -29,6 +29,36 @@ public class BowlingGameTest {
         checkScore(20);
     }
 
+    @Test
+    public void oneSpare() {
+        rollSpare();
+
+        game.roll(3);
+
+        rollMany(17, 0);
+
+        checkScore(16);
+    }
+
+    @Test
+    public void oneTwoSpares() {
+        rollSpare();
+
+        rollSpare();
+
+        game.roll(3);
+
+        rollMany(15, 1);
+
+        checkScore(46);
+    }
+
+
+    private void rollSpare() {
+        game.roll(5);
+        game.roll(5);
+    }
+
 
     private void rollMany(int rolls, int pins) {
         for (int i = 0; i < rolls; i++) {
