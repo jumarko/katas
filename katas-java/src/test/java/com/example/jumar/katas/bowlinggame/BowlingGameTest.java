@@ -65,6 +65,14 @@ public class BowlingGameTest {
         checkScore(46);
     }
 
+    @Test
+    public void perfectGame() {
+        rollMany(12, 10);
+
+        checkScore(300);
+    }
+
+
 
     private void rollSpare() {
         game.roll(5);

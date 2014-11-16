@@ -20,11 +20,12 @@ public class Game {
             if (isStrike(frameIndex)) {
                 score += 10 + strikeBonus(frameIndex);
                 frameIndex++;
-            } else if (isSpare(frameIndex)) {
-                score += 10 + spareBonus(frameIndex);
-                frameIndex += 2;
             } else {
-                score += sumOfBallsInFrame(frameIndex);
+                if (isSpare(frameIndex)) {
+                    score += 10 + spareBonus(frameIndex);
+                } else {
+                    score += sumOfBallsInFrame(frameIndex);
+                }
                 frameIndex += 2;
             }
 
