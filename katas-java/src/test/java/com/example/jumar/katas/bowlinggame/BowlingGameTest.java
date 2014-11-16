@@ -41,7 +41,19 @@ public class BowlingGameTest {
     }
 
     @Test
-    public void oneTwoSpares() {
+    public void oneStrike() {
+        rollStrike();
+
+        game.roll(3);
+        game.roll(4);
+
+        rollMany(16, 0);
+
+        checkScore(24);
+    }
+
+    @Test
+    public void twoSpares() {
         rollSpare();
 
         rollSpare();
@@ -57,6 +69,10 @@ public class BowlingGameTest {
     private void rollSpare() {
         game.roll(5);
         game.roll(5);
+    }
+
+    private void rollStrike() {
+        game.roll(10); // strike
     }
 
 
