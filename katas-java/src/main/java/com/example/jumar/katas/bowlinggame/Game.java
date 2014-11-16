@@ -28,7 +28,6 @@ public class Game {
                 }
                 frameIndex += 2;
             }
-
         }
 
         return score;
