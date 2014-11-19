@@ -7,20 +7,13 @@ public class PrimeFactors {
 
     public static List<Integer> generate(int number) {
         final List<Integer> primes = new ArrayList<Integer>();
-        if (number > 1) {
-            int candidate = 2;
-            while (number > 1) {
-                while (number % candidate == 0) {
-                    primes.add(candidate);
-                    number = number / candidate;
-                }
-                candidate++;
-            }
 
-            if (number > 1) {
-                primes.add(number);
+        for (int candidate = 2; number > 1; candidate++) {
+            for (; number % candidate == 0; number /= candidate) {
+                primes.add(candidate);
             }
         }
+
         return primes;
     }
 
