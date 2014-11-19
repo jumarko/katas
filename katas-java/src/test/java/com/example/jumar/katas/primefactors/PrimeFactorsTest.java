@@ -30,4 +30,9 @@ public class PrimeFactorsTest {
     public void four() {
         assertThat(PrimeFactors.generate(4), is(asList(2, 2)));
     }
+
+    @Test
+    public void six() {
+        assertThat(PrimeFactors.generate(6), is(asList(2, 3)));
+    }
 }
