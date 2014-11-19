@@ -40,4 +40,9 @@ public class PrimeFactorsTest {
     public void eight() {
         assertThat(PrimeFactors.generate(8), is(asList(2, 2, 2)));
     }
+
+    @Test
+    public void nine() {
+        assertThat(PrimeFactors.generate(9), is(asList(3, 3)));
+    }
 }
