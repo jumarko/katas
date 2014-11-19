@@ -21,4 +21,9 @@ public class PrimeFactorsTest {
         assertThat(PrimeFactors.generate(2), is(asList(2)));
     }
 
+    @Test
+    public void three() {
+        assertThat(PrimeFactors.generate(3), is(asList(3)));
+    }
+
 }
